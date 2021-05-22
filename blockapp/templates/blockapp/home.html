@@ -1,0 +1,16 @@
+<h1>Home Page</h1>
+
+<div>
+    {% for post in posts %}
+    <div>
+        <h3>{{ post.title }}</h3>
+    </div>
+    <div>
+        <p>{{ post.content|safe }}</p>
+    </div>
+    <div>
+        <img src="{{ post.photo.url }}" alt=""><br>
+        <span>{{ post.created_at|date:"Y-m-d" }}</span>
+    </div>
+    {% endfor %}
+</div>
